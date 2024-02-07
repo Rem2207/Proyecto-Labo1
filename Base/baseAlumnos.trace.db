@@ -1,0 +1,215 @@
+2023-05-31 13:57:16 jdbc[7]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.test(WebApp.java:972)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 13 more
+2023-05-31 13:58:14 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE [*]DATABASE"; se esperaba "OR REPLACE, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMP, TEMPORARY, TABLE, SYNONYM, UNIQUE, HASH, SPATIAL, INDEX"
+Syntax error in SQL statement "CREATE [*]DATABASE"; expected "OR REPLACE, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMP, TEMPORARY, TABLE, SYNONYM, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+CREATE DATABASE [42001-214]
+2023-05-31 13:58:34 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM [*]*"; se esperaba "identifier"
+Syntax error in SQL statement "SELECT * FROM [*]*"; expected "identifier"; SQL statement:
+SELECT * FROM * [42001-214]
+2023-05-31 20:09:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE [*]'Usuario'("; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE [*]'Usuario'("; expected "identifier"; SQL statement:
+CREATE TABLE 'Usuario'( [42001-214]
+2023-05-31 20:09:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `Usuario` (\000d\000a  `idUsuario` BIGINT,\000d\000a  `nombreUsuario` VARCHAR(255),\000d\000a  `mailUsuario` VARCHAR(255),\000d\000a  `contraseña` [*]<type>,\000d\000a  PRIMARY KEY (`idUsuario`)\000d\000a)"; se esperaba "IDENTITY, BIGSERIAL, SERIAL, data type"
+Syntax error in SQL statement "CREATE TABLE `Usuario` (\000d\000a  `idUsuario` BIGINT,\000d\000a  `nombreUsuario` VARCHAR(255),\000d\000a  `mailUsuario` VARCHAR(255),\000d\000a  `contraseña` [*]<type>,\000d\000a  PRIMARY KEY (`idUsuario`)\000d\000a)"; expected "IDENTITY, BIGSERIAL, SERIAL, data type"; SQL statement:
+CREATE TABLE `Usuario` (
+  `idUsuario` BIGINT,
+  `nombreUsuario` VARCHAR(255),
+  `mailUsuario` VARCHAR(255),
+  `contraseña` <type>,
+  PRIMARY KEY (`idUsuario`)
+) [42001-214]
+2023-05-31 20:10:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `Usuario` (\000d\000a  `idUsuario` BIGINT,\000d\000a  `nombreUsuario` VARCHAR(255),\000d\000a  `mailUsuario` VARCHAR(255),\000d\000a  `contraseña` [*]<type>,\000d\000a  PRIMARY KEY (`idUsuario`)\000d\000a)"; se esperaba "IDENTITY, BIGSERIAL, SERIAL, data type"
+Syntax error in SQL statement "CREATE TABLE `Usuario` (\000d\000a  `idUsuario` BIGINT,\000d\000a  `nombreUsuario` VARCHAR(255),\000d\000a  `mailUsuario` VARCHAR(255),\000d\000a  `contraseña` [*]<type>,\000d\000a  PRIMARY KEY (`idUsuario`)\000d\000a)"; expected "IDENTITY, BIGSERIAL, SERIAL, data type"; SQL statement:
+CREATE TABLE `Usuario` (
+  `idUsuario` BIGINT,
+  `nombreUsuario` VARCHAR(255),
+  `mailUsuario` VARCHAR(255),
+  `contraseña` <type>,
+  PRIMARY KEY (`idUsuario`)
+) [42001-214]
+2023-05-31 20:10:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `Usuario` (\000d\000a  `idUsuario` INT,\000d\000a  `nombreUsuario` VARCHAR(255),\000d\000a  `mailUsuario` VARCHAR(255),\000d\000a  `contraseña` [*]<type>,\000d\000a  PRIMARY KEY (`idUsuario`)\000d\000a)"; se esperaba "IDENTITY, BIGSERIAL, SERIAL, data type"
+Syntax error in SQL statement "CREATE TABLE `Usuario` (\000d\000a  `idUsuario` INT,\000d\000a  `nombreUsuario` VARCHAR(255),\000d\000a  `mailUsuario` VARCHAR(255),\000d\000a  `contraseña` [*]<type>,\000d\000a  PRIMARY KEY (`idUsuario`)\000d\000a)"; expected "IDENTITY, BIGSERIAL, SERIAL, data type"; SQL statement:
+CREATE TABLE `Usuario` (
+  `idUsuario` INT,
+  `nombreUsuario` VARCHAR(255),
+  `mailUsuario` VARCHAR(255),
+  `contraseña` <type>,
+  PRIMARY KEY (`idUsuario`)
+) [42001-214]
+2023-05-31 20:13:55 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: F:/Facultad/Labo 1/TP/Base/baseEntradas.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: F:/Facultad/Labo 1/TP/Base/baseEntradas.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at Model.DAOComprador.guardar(DAOComprador.java:37)
+	at Main.main(Main.java:21)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: F:/Facultad/Labo 1/TP/Base/baseEntradas.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: F:/Facultad/Labo 1/TP/Base/baseEntradas.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 19 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: F:/Facultad/Labo 1/TP/Base/baseEntradas.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 13 more
+2023-05-31 20:14:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "COMPRADOR" no encontrada
+Table "COMPRADOR" not found; SQL statement:
+INSERT into Comprador Values(?,?,?,?) [42102-214]
+2023-06-06 12:23:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "USUARIOS" no encontrada
+Table "USUARIOS" not found; SQL statement:
+SELECT * FROM USUARIOS [42102-214]
+2023-06-06 12:33:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "IDUSUARIO" no encontrada
+Table "IDUSUARIO" not found; SQL statement:
+DELETE FROM IDUSUARIO [42102-214]
+2023-06-06 12:33:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "NOMBREUSUARIO" no encontrada
+Table "NOMBREUSUARIO" not found; SQL statement:
+DELETE FROM NOMBREUSUARIO [42102-214]
+2023-06-06 12:33:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MAILUSUARIO" no encontrada
+Table "MAILUSUARIO" not found; SQL statement:
+DELETE FROM MAILUSUARIO [42102-214]
+2023-06-06 12:33:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CONTRASEÑA" no encontrada
+Table "CONTRASEÑA" not found; SQL statement:
+DELETE FROM CONTRASEÑA [42102-214]
+2023-06-06 12:33:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "IDUSUARIO" no encontrada
+Table "IDUSUARIO" not found; SQL statement:
+DELETE FROM IDUSUARIO [42102-214]
+2023-06-06 13:47:37 database: wrong user or password; user: ""
+org.h2.message.DbException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.test(WebApp.java:972)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 16 more
+2023-06-06 13:47:41 jdbc[3]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 13 more
+2023-06-06 13:47:41 jdbc[3]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 13 more
+2023-06-06 14:06:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "Select * [*]USUARIONORMAL"
+Syntax error in SQL statement "Select * [*]USUARIONORMAL"; SQL statement:
+Select * USUARIONORMAL [42000-214]
+2023-06-06 14:42:29 database: wrong user or password; user: "ADMIN"
+org.h2.message.DbException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at modelo.DAONormalUser.guardar(DAONormalUser.java:20)
+	at Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 13 more

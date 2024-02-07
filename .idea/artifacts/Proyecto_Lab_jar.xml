@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Proyecto Lab:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Proyecto_Lab_jar</output-path>
+    <root id="archive" name="Proyecto Lab.jar">
+      <element id="module-output" name="Proyecto Lab" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/h2-2022-06-13/h2/bin/h2-2.1.214.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

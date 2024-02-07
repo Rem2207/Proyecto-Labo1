@@ -1,0 +1,15 @@
+Nombre de la materia: Pythone
+Valor del curso: 200.0
+Cantidad de alumnos: 2
+Recaudación total: 400.0 pesos
+
+CodLista: 2
+Materia: Pythone
+DNI del alumno: 8888
+CodCurso: 1
+
+CodLista: 7
+Materia: Pythone
+DNI del alumno: 1
+CodCurso: 1
+
